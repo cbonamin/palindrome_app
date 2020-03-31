@@ -2,7 +2,7 @@
 require 'sinatra'
 
 get '/' do
-  @title = 'Home'
+  @title = 'Index'
   erb :index
 end
 
