@@ -1,8 +1,9 @@
 
 require 'sinatra'
+require 'mhartl_palindrome'
 
 get '/' do
-  @title = 'Index'
+  @title = 'Home'
   erb :index
 end
 
@@ -14,4 +15,9 @@ end
 get '/palindrome' do
   @title = 'Palindrome Detector'
   erb :palindrome
+end
+
+post '/check' do
+  @phrase = params[:phrase]
+  erb :result
 end
